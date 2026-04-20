@@ -231,11 +231,11 @@ export default function CriteriaList() {
           <p className="text-xl md:text-2xl font-medium text-foreground leading-relaxed flex-1">
             Vấn đề không phải là{" "}
             <span className="font-bold text-brand-crimson">
-              "Còn hay không còn ngay lập tức kinh tế tự nhân và phân hóa thu nhập"
+              &quot;Còn hay không còn ngay lập tức kinh tế tư nhân và phân hóa thu nhập&quot;
             </span>{" "}
             mà là {" "}
             <span className="font-bold text-brand-purple">
-              "Xã hội đó đang chuyển hóa theo hướng nào, dưới sự định hướng nào và nhầm mục tiêu gì"
+              &quot;Xã hội đó đang chuyển hóa theo hướng nào, dưới sự định hướng nào và nhằm mục tiêu gì&quot;
             </span>
           </p>
           <button className="shrink-0 flex items-center justify-center w-14 h-14 rounded-full bg-foreground text-background hover:scale-110 transition-transform">
