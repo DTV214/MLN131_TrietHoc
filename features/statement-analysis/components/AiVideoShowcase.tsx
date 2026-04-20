@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Play, Video, Sparkles, Volume2, Info } from "lucide-react";
+import { Play, Sparkles, Volume2, Info, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function AiVideoShowcase() {
@@ -27,21 +27,21 @@ export default function AiVideoShowcase() {
       </div>
 
       {/* KHUNG CHỨA VIDEO (CINEMATIC FRAME) */}
-      <div className="relative aspect-video w-full rounded-3xl overflow-hidden glass-card border border-white/10 shadow-[0_0_100px_-20px_rgba(150,0,255,0.2)] group">
+      <div className="relative aspect-video w-full rounded-3xl overflow-hidden glass-card border border-white/10 shadow-[0_0_100px_-20px_rgba(150,0,255,0.2)] group bg-black">
         {/* Lớp nền mờ khi chưa phát video (Thumbnail) */}
         {!isPlaying ? (
           <div className="absolute inset-0 z-20 flex flex-col items-center justify-center">
-            {/* Ảnh nền Thumbnail (Bạn có thể thay link ảnh AI tạo ra vào đây) */}
+            {/* Ảnh nền Thumbnail dùng đúng link Giáo trình của bạn */}
             <div className="absolute inset-0 opacity-40 grayscale group-hover:grayscale-0 transition-all duration-700">
               <img
-                src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2064&auto=format&fit=crop"
+                src="https://res.cloudinary.com/dratbz8bh/image/upload/v1765768350/BAS1151_20-_20Kinh_20t_E1_BA_BF_20ch_C3_ADnh_20tr_E1_BB_8B_20M_C3_A1c-L_C3_AAnin_xsdptv.jpg"
                 alt="Video Thumbnail"
                 className="w-full h-full object-cover"
               />
             </div>
 
             {/* Lớp Overlay đen mờ */}
-            <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500" />
+            <div className="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors duration-500" />
 
             {/* Nút Play trung tâm */}
             <button
@@ -54,46 +54,44 @@ export default function AiVideoShowcase() {
               </div>
             </button>
 
-            <span className="mt-6 text-white/80 font-bold tracking-widest uppercase text-sm animate-pulse">
+            <span className="mt-6 text-white/90 font-bold tracking-widest uppercase text-sm animate-pulse drop-shadow-md">
               Nhấn để bắt đầu xem
             </span>
           </div>
         ) : (
-          /* TRÌNH PHÁT VIDEO THỰC TẾ (Sẽ thay URL vào đây) */
-          <div className="absolute inset-0 bg-black flex items-center justify-center text-white">
-            <div className="flex flex-col items-center gap-4">
-              <Video size={48} className="text-brand-purple animate-bounce" />
-              <p className="text-xl font-medium">
-                Hệ thống đang chờ liên kết Video từ AI của bạn...
-              </p>
-              <button
-                onClick={() => setIsPlaying(false)}
-                className="px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-sm transition-colors"
-              >
-                Quay lại màn hình chờ
-              </button>
-            </div>
+          /* TRÌNH PHÁT VIDEO THỰC TẾ */
+          <div className="absolute inset-0 z-30 bg-black flex items-center justify-center">
+            {/* Thẻ Video HTML5 */}
+            <video
+              className="w-full h-full object-contain"
+              src="https://res.cloudinary.com/dratbz8bh/video/upload/v1776699935/ChuNghiaXaHoi_2_qzvgwc.mp4"
+              controls
+              autoPlay
+              playsInline
+            />
 
-            {/* KHI CÓ LINK VIDEO (YOUTUBE/DRIVE/CLOUD), BẠN DÙNG THẺ IFRAME HOẶC VIDEO: */}
-            {/* <iframe 
-              className="w-full h-full"
-              src="LINK_VIDEO_CỦA_BẠN?autoplay=1"
-              allow="autoplay; encrypted-media"
-              allowFullScreen
-            /> 
-            */}
+            {/* Nút Tắt Video ở góc phải trên cùng */}
+            <button
+              onClick={() => setIsPlaying(false)}
+              className="absolute top-4 right-4 md:top-6 md:right-6 p-2 rounded-full bg-black/50 hover:bg-brand-crimson text-white backdrop-blur-md transition-colors shadow-lg z-40"
+              aria-label="Đóng video"
+            >
+              <X size={24} />
+            </button>
           </div>
         )}
 
         {/* Thanh trạng thái phía dưới (Dạng thanh Progress giả) */}
-        <div className="absolute bottom-0 left-0 w-full h-1.5 bg-white/10 z-30">
-          <div
-            className={cn(
-              "h-full bg-brand-purple transition-all duration-1000",
-              isPlaying ? "w-full" : "w-0",
-            )}
-          />
-        </div>
+        {!isPlaying && (
+          <div className="absolute bottom-0 left-0 w-full h-1.5 bg-white/10 z-30">
+            <div
+              className={cn(
+                "h-full bg-brand-purple transition-all duration-1000",
+                isPlaying ? "w-full" : "w-0",
+              )}
+            />
+          </div>
+        )}
       </div>
 
       {/* THÔNG TIN CHI TIẾT DƯỚI VIDEO (FOOTNOTE) */}

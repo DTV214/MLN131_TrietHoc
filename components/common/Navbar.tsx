@@ -31,10 +31,11 @@ export default function Navbar() {
   return (
     <header
       className={cn(
-        "fixed top-0 w-full z-50 transition-all duration-300 border-b border-transparent",
+        "fixed top-0 w-full z-50 transition-all duration-300 border-b",
+        // Tối ưu hóa background: Khi cuộn xuống, nền đục 95% và làm mờ mạnh để chữ không bị chìm
         isScrolled
-          ? "glass-panel border-border/50 py-3 shadow-lg"
-          : "bg-transparent py-5",
+          ? "bg-background/95 backdrop-blur-xl border-border/50 py-3 shadow-md"
+          : "bg-transparent border-transparent py-5",
       )}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
@@ -57,7 +58,8 @@ export default function Navbar() {
             <a
               key={link.name}
               href={link.href}
-              className="text-sm font-medium text-muted-foreground hover:text-brand-purple transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-brand-purple after:transition-all hover:after:w-full py-1"
+              // Chữ được làm đậm hơn (font-semibold) và màu sắc tương phản tốt hơn (text-foreground/80)
+              className="text-sm font-semibold text-foreground/80 hover:text-brand-purple transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-brand-purple after:transition-all hover:after:w-full py-1"
             >
               {link.name}
             </a>
@@ -87,7 +89,7 @@ export default function Navbar() {
               key={link.name}
               href={link.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-lg font-medium text-foreground hover:text-brand-purple transition-colors"
+              className="text-lg font-bold text-foreground/80 hover:text-brand-purple transition-colors"
             >
               {link.name}
             </a>

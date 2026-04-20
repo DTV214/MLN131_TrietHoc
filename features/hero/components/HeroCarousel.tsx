@@ -20,7 +20,7 @@ const CAROUSEL_IMAGES = [
   },
   {
     id: 3,
-    src: "https://res.cloudinary.com/dratbz8bh/image/upload/v1765768350/BAS1151_20-_20Kinh_20t_E1_BA_BF_20ch_C3_ADnh_20tr_E1_BB_8B_20M_C3_A1c-L_C3_AAnin_xsdptv.jpg",
+    src: "https://res.cloudinary.com/dratbz8bh/image/upload/v1765771493/article_tkzsvc.jpg",
     alt: "Chuyển động và đổi mới",
   },
 ];
