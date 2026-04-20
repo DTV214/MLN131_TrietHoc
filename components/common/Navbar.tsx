@@ -1,17 +1,19 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { Menu, X, BookOpen } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 // Danh sách các mục điều hướng dựa theo các Section đã định nghĩa ở page.tsx
 const navLinks = [
-  { name: "Trang Chủ", href: "#hero" },
-  { name: "Căn Cứ Lý Luận", href: "#theoretical-basis" },
-  { name: "Phân Tích Nhận Định", href: "#statement-analysis" },
-  { name: "Tiêu Chí Đánh Giá", href: "#evaluation-criteria" },
-  { name: "Thực Tiễn VN", href: "#historical-timeline" },
-  { name: "AI Usage", href: "#ai-usage" },
+  { name: "Trang Chủ", href: "/#hero" },
+  { name: "Căn Cứ Lý Luận", href: "/#theoretical-basis" },
+  { name: "Phân Tích Nhận Định", href: "/#statement-analysis" },
+  { name: "Tiêu Chí Đánh Giá", href: "/#evaluation-criteria" },
+  { name: "Thực Tiễn VN", href: "/#historical-timeline" },
+  { name: "AI Usage", href: "/#ai-usage" },
+  { name: "Quiz Review", href: "/quiz-review" },
 ];
 
 export default function Navbar() {
@@ -40,8 +42,8 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Logo / Tên Nhóm */}
-        <a
-          href="#hero"
+        <Link
+          href="/#hero"
           className="flex items-center gap-2 group cursor-pointer"
         >
           <div className="p-2 rounded-lg bg-brand-purple/20 text-brand-purple group-hover:bg-brand-purple group-hover:text-white transition-colors">
@@ -50,19 +52,19 @@ export default function Navbar() {
           <span className="font-heading font-bold text-xl tracking-tight text-foreground">
             Nhóm <span className="text-brand-purple">2</span>
           </span>
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.name}
               href={link.href}
               // Chữ được làm đậm hơn (font-semibold) và màu sắc tương phản tốt hơn (text-foreground/80)
               className="text-sm font-semibold text-foreground/80 hover:text-brand-purple transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-brand-purple after:transition-all hover:after:w-full py-1"
             >
               {link.name}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -85,14 +87,14 @@ export default function Navbar() {
       >
         <nav className="flex flex-col items-center py-6 gap-6 shadow-xl">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.name}
               href={link.href}
               onClick={() => setIsMobileMenuOpen(false)}
               className="text-lg font-bold text-foreground/80 hover:text-brand-purple transition-colors"
             >
               {link.name}
-            </a>
+            </Link>
           ))}
         </nav>
       </div>

@@ -23,8 +23,12 @@ type Question = {
   desc: string;
   optA: string;
   optB: string;
+  optC: string;
+  optD: string;
   effectA: Stats;
   effectB: Stats;
+  effectC: Stats;
+  effectD: Stats;
 };
 
 const INITIAL_STATS: Stats = {
@@ -36,67 +40,99 @@ const INITIAL_STATS: Stats = {
 const questions: Question[] = [
   {
     title: "Bài toán Khởi nghiệp",
-    desc: "Nền kinh tế trì trệ. Có đề xuất cho phép mở doanh nghiệp tư nhân tự do.",
-    optA: "Khuyến khích kinh tế tư nhân",
-    effectA: { llsx: 15, ttkt: 15, cbxh: -10 },
-    optB: "Cấm tư nhân, Nhà nước bao cấp",
-    effectB: { llsx: -10, ttkt: -15, cbxh: 10 },
+    desc: "Nền kinh tế đang thiếu sức bật. Có đề xuất mở cửa hoàn toàn cho kinh tế tư nhân.",
+    optA: "Tự do hóa 100%, tư nhân được làm mọi ngành nghề",
+    effectA: { llsx: 20, ttkt: 20, cbxh: -20 },
+    optB: "Cấm tư nhân, Nhà nước bao cấp để giữ công bằng",
+    effectB: { llsx: -15, ttkt: -20, cbxh: 15 },
+    optC: "Chỉ cho phép kinh doanh hộ gia đình, tiểu thủ công nghiệp",
+    effectC: { llsx: 5, ttkt: 5, cbxh: 0 },
+    optD: "Khuyến khích tư nhân, nhưng Nhà nước độc quyền các ngành trọng yếu (điện, an ninh)",
+    effectD: { llsx: 15, ttkt: 10, cbxh: -5 },
   },
   {
     title: "Phân phối thu nhập",
-    desc: "Chuyên gia nước ngoài đòi lương gấp 50 lần công nhân.",
-    optA: "Trả lương theo năng lực thị trường",
-    effectA: { llsx: 20, ttkt: 10, cbxh: -15 },
-    optB: "Cào bằng lương để giữ công bằng",
-    effectB: { llsx: -15, ttkt: -10, cbxh: 15 },
+    desc: "Thiếu hụt kỹ sư công nghệ cao. Chuyên gia nước ngoài đòi mức lương gấp 50 lần công nhân.",
+    optA: "Trả theo yêu cầu thị trường để hút nhân tài bằng mọi giá",
+    effectA: { llsx: 15, ttkt: 15, cbxh: -25 },
+    optB: "Cào bằng lương, tối đa chỉ được gấp 3 lần để tránh tị nạnh",
+    effectB: { llsx: -20, ttkt: -15, cbxh: 20 },
+    optC: "Trả lương cao kèm điều kiện bắt buộc chuyển giao công nghệ cho nhân sự nội bộ",
+    effectC: { llsx: 25, ttkt: 10, cbxh: -5 },
+    optD: "Trả lương cao nhưng ép đóng 40% vào quỹ an sinh xã hội",
+    effectD: { llsx: 5, ttkt: 5, cbxh: 5 },
   },
   {
     title: "Cổ phần hóa",
-    desc: "Nhiều Doanh nghiệp Nhà nước đang thua lỗ, thâm hụt ngân sách.",
-    optA: "Bán vốn cho tư nhân quản lý",
-    effectA: { llsx: 10, ttkt: 15, cbxh: -10 },
-    optB: "Dùng ngân sách bù lỗ",
-    effectB: { llsx: -5, ttkt: -20, cbxh: 10 },
+    desc: "Nhiều Doanh nghiệp Nhà nước (DNNN) ở các mảng như bia, sữa, giải trí đang kẹt vốn.",
+    optA: "Thoái vốn 100% ở các ngành tiêu dùng không thiết yếu để lấy tiền đầu tư hạ tầng",
+    effectA: { llsx: 15, ttkt: 25, cbxh: 0 },
+    optB: "Tiếp tục dùng ngân sách bù lỗ để giữ quy mô DNNN",
+    effectB: { llsx: -10, ttkt: -25, cbxh: 5 },
+    optC: "Bán 49% vốn, Nhà nước vẫn giữ quyền quyết định",
+    effectC: { llsx: 10, ttkt: 10, cbxh: -5 },
+    optD: "Giữ 100% vốn nhưng thay đổi giám đốc, khoán doanh thu",
+    effectD: { llsx: 5, ttkt: 0, cbxh: 5 },
   },
   {
     title: "Thuế thu nhập",
-    desc: "Khoảng cách giàu nghèo lộ rõ do giới tỷ phú tư nhân phất lên.",
-    optA: "Đánh thuế lũy tiến người giàu",
-    effectA: { llsx: 0, ttkt: -10, cbxh: 25 },
-    optB: "Giữ thuế thấp kích thích đầu tư",
-    effectB: { llsx: 10, ttkt: 15, cbxh: -20 },
+    desc: "Khoảng cách giàu nghèo tăng. Xuất hiện tình trạng doanh nghiệp lớn lách thuế, chuyển giá.",
+    optA: "Miễn thuế thêm để kích thích giới chủ mở rộng đầu tư",
+    effectA: { llsx: 15, ttkt: 20, cbxh: -30 },
+    optB: "Siết chặt luật, chống chuyển giá, trốn thuế và thu hồi tài sản bất minh",
+    effectB: { llsx: 5, ttkt: 15, cbxh: 25 },
+    optC: "Áp dụng thuế thu nhập cá nhân lên tới 60% cho người giàu",
+    effectC: { llsx: -10, ttkt: -15, cbxh: 20 },
+    optD: "Đánh thuế tài sản (BĐS thứ 2), lấy tiền xây nhà ở xã hội",
+    effectD: { llsx: 5, ttkt: 0, cbxh: 15 },
   },
   {
     title: "Y tế & Giáo dục",
-    desc: "Bệnh viện, trường học công quá tải.",
-    optA: "Cho tư nhân mở trường, viện quốc tế",
-    effectA: { llsx: 15, ttkt: 10, cbxh: -15 },
-    optB: "Chỉ Nhà nước được làm y tế, giáo dục",
-    effectB: { llsx: -5, ttkt: -15, cbxh: 15 },
+    desc: "Bệnh viện và trường học công lập đang quá tải trầm trọng.",
+    optA: "Thương mại hóa hoàn toàn, ai có tiền mới được dịch vụ tốt",
+    effectA: { llsx: 20, ttkt: 20, cbxh: -35 },
+    optB: "Cấm tư nhân làm y tế/giáo dục, mọi người xếp hàng chờ đến lượt",
+    effectB: { llsx: -10, ttkt: -20, cbxh: 15 },
+    optC: "Xã hội hóa: Cho tư nhân mở viện/trường chất lượng cao để chia sẻ gánh nặng với hệ thống công",
+    effectC: { llsx: 15, ttkt: 15, cbxh: -5 },
+    optD: "Khuyến khích tư nhân làm nhưng Nhà nước khống chế mức học phí, viện phí",
+    effectD: { llsx: 5, ttkt: -5, cbxh: 10 },
   },
   {
     title: "Đầu tư Ngân sách",
-    desc: "Quốc gia có một khoản thặng dư ngân sách lớn.",
-    optA: "Đổ tiền vào hạ tầng R&D",
-    effectA: { llsx: 25, ttkt: 10, cbxh: 0 },
-    optB: "Phát tiền trợ cấp cho dân",
-    effectB: { llsx: 0, ttkt: -10, cbxh: 20 },
+    desc: "Quốc gia vừa thu được một khoản thặng dư ngân sách rất lớn từ xuất khẩu.",
+    optA: "Đầu tư dồn lực vào đường cao tốc, cảng biển và R&D công nghệ lõi",
+    effectA: { llsx: 30, ttkt: 15, cbxh: 5 },
+    optB: "Phát tiền mặt trực tiếp chia đều cho toàn dân tiêu xài ngắn hạn",
+    effectB: { llsx: -5, ttkt: -15, cbxh: 20 },
+    optC: "Lập quỹ hỗ trợ hàng ngàn startup nhỏ lẻ",
+    effectC: { llsx: 15, ttkt: 5, cbxh: 5 },
+    optD: "Chỉ tập trung xây điện, đường, trường, trạm ở vùng sâu vùng xa",
+    effectD: { llsx: 5, ttkt: 5, cbxh: 20 },
   },
   {
     title: "Khủng hoảng kinh tế",
-    desc: "Suy thoái toàn cầu, nhiều tập đoàn nguy cơ phá sản.",
-    optA: "Bơm tín dụng cứu các tập đoàn",
-    effectA: { llsx: 10, ttkt: 10, cbxh: -15 },
-    optB: "Mặc kệ DN, trợ cấp cho công nhân",
-    effectB: { llsx: -15, ttkt: -15, cbxh: 20 },
+    desc: "Đứt gãy chuỗi cung ứng toàn cầu, nhiều nhà máy đóng cửa, công nhân mất việc.",
+    optA: "Bơm tiền ngân sách cứu trực tiếp các tập đoàn tư nhân lớn",
+    effectA: { llsx: 10, ttkt: 15, cbxh: -20 },
+    optB: "Mặc kệ thị trường tự thanh lọc, doanh nghiệp tự sinh tự diệt",
+    effectB: { llsx: -15, ttkt: -15, cbxh: -10 },
+    optC: "Nhà nước cho vay nhưng yêu cầu thế chấp bằng cổ phần",
+    effectC: { llsx: 5, ttkt: 5, cbxh: 5 },
+    optD: "Chủ động để DN yếu kém phá sản, dồn tiền hỗ trợ trực tiếp và đào tạo lại nghề cho công nhân",
+    effectD: { llsx: 10, ttkt: -5, cbxh: 25 },
   },
   {
     title: "Điều tiết thị trường",
-    desc: "Kinh tế tăng trưởng mạnh, nhưng vài tập đoàn có dấu hiệu lũng đoạn.",
-    optA: "Phạt nặng, chống độc quyền (Nhà nước điều tiết)",
-    effectA: { llsx: 5, ttkt: -5, cbxh: 20 },
-    optB: "Để quy luật thị trường tự do diễn ra",
-    effectB: { llsx: 0, ttkt: 15, cbxh: -25 },
+    desc: "Thị trường hàng hóa thiết yếu (xăng dầu, lương thực) biến động giá dữ dội do đầu cơ.",
+    optA: "Để quy luật cung cầu tự quyết định, giá lên cao tự khắc sẽ có nguồn cung mới",
+    effectA: { llsx: 5, ttkt: 15, cbxh: -30 },
+    optB: "Kích hoạt các Tập đoàn Nhà nước chủ lực xả kho, bán bình ổn giá để dẫn dắt thị trường",
+    effectB: { llsx: 10, ttkt: 10, cbxh: 20 },
+    optC: "Lập đoàn thanh tra đi phạt hành chính các cửa hàng bán lẻ tăng giá",
+    effectC: { llsx: 0, ttkt: -5, cbxh: 5 },
+    optD: "Sử dụng Luật hình sự để bỏ tù ngay lập tức mọi cá nhân găm hàng",
+    effectD: { llsx: -5, ttkt: -10, cbxh: 15 },
   },
 ];
 
@@ -239,7 +275,7 @@ function ChoiceButton({
   label,
   onClick,
 }: {
-  marker: "A" | "B";
+  marker: "A" | "B" | "C" | "D";
   label: string;
   onClick: () => void;
 }) {
@@ -532,6 +568,16 @@ export default function StrategicTycoonGame() {
                   marker="B"
                   label={currentQuestion.optB}
                   onClick={() => chooseOption(currentQuestion.effectB)}
+                />
+                <ChoiceButton
+                  marker="C"
+                  label={currentQuestion.optC}
+                  onClick={() => chooseOption(currentQuestion.effectC)}
+                />
+                <ChoiceButton
+                  marker="D"
+                  label={currentQuestion.optD}
+                  onClick={() => chooseOption(currentQuestion.effectD)}
                 />
               </div>
             </main>

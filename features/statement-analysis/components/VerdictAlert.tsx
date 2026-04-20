@@ -51,7 +51,7 @@ export default function VerdictAlert() {
                     size={24}
                     className="group-hover:animate-pulse"
                   />
-                  Bắt đầu phân tích Logic
+                  Kết luận của nhóm
                 </span>
                 <div className="absolute inset-0 bg-brand-purple translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out" />
               </button>
@@ -75,7 +75,7 @@ export default function VerdictAlert() {
             </div>
 
             <p className="text-xl md:text-2xl italic font-medium text-foreground leading-relaxed relative">
-              Theo chủ nghĩa Mác - Lênin, chừng nào{" "}
+              Quan điểm: Theo chủ nghĩa Mác - Lênin, chừng nào{" "}
               {/* Cụm từ có lỗi logic sẽ bị bôi đỏ khi có kết quả */}
               <span
                 className={cn(
@@ -140,7 +140,7 @@ export default function VerdictAlert() {
             Kết luận từ nhóm
           </div>
           <h3 className="text-4xl md:text-5xl font-extrabold text-foreground tracking-tight uppercase mb-6 drop-shadow-md">
-            Phát biểu hoàn toàn <span className="text-brand-crimson">SAI</span>
+            Phát biểu trên là <span className="text-brand-crimson">SAI</span>
           </h3>
           
         </div>
