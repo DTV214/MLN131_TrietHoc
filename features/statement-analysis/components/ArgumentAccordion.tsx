@@ -16,19 +16,19 @@ const argumentsData = [
     image:
       "https://res.cloudinary.com/dratbz8bh/image/upload/v1765768350/BAS1151_20-_20Kinh_20t_E1_BA_BF_20ch_C3_ADnh_20tr_E1_BB_8B_20M_C3_A1c-L_C3_AAnin_xsdptv.jpg", // Ảnh về dòng thời gian
     content:
-      "Theo Chương 3, thời kỳ quá độ lên CNXH là giai đoạn tất yếu. Trong giai đoạn đó, xã hội chưa thể lập tức xóa bỏ hết những yếu tố của xã hội cũ. Vì vậy, sự tồn tại của kinh tế tư nhân hay chênh lệch thu nhập không phải điều bất thường, càng không phải bằng chứng đủ để kết luận xã hội không đi theo CNXH.",
+      "Theo Chương 3, thời kỳ quá độ lên Chủ nghĩa xã hội là giai đoạn tất yếu. Trong giai đoạn đó, xã hội chưa thể lập tức xóa bỏ hết những yếu tố của xã hội cũ. Vì vậy, sự tồn tại của kinh tế tư nhân hay chênh lệch thu nhập không phải điều bất thường, càng không phải bằng chứng đủ để kết luận xã hội không đi theo Chủ nghĩa xã hội.",
     keywords: ["Tất yếu khách quan", "Xã hội cũ đan xen", "Không bất thường"],
   },
   {
     id: "arg-2",
-    title: "Đi ngược luận điểm về nhiều hình thức sở hữu",
+    title: "Đi ngược luận điểm về nhiều hình thức sở hữu và phân hóa trong thời kỳ quá độ",
     icon: PieChart,
     color: "text-orange-500 dark:text-orange-400",
     bgColor: "bg-orange-500",
     image:
       "https://res.cloudinary.com/dratbz8bh/image/upload/v1765768350/BAS1151_20-_20Kinh_20t_E1_BA_BF_20ch_C3_ADnh_20tr_E1_BB_8B_20M_C3_A1c-L_C3_AAnin_xsdptv.jpg", // Ảnh về dòng thời gian
     content:
-      "Trong thời kỳ quá độ tất yếu còn nhiều hình thức sở hữu, nhiều thành phần kinh tế và nhiều hình thức phân phối khác nhau. Nếu lý luận đã khẳng định như vậy, thì việc còn kinh tế tư nhân và còn phân hóa thu nhập chỉ là biểu hiện có thể có của thời kỳ quá độ, chứ không phải bằng chứng phủ định định hướng XHCN.",
+      "Trong thời kỳ quá độ tất yếu còn nhiều hình thức sở hữu, nhiều thành phần kinh tế và nhiều hình thức phân phối khác nhau. Nếu lý luận đã khẳng định như vậy, thì việc còn kinh tế tư nhân và còn phân hóa thu nhập chỉ là biểu hiện có thể có của thời kỳ quá độ, chứ không phải bằng chứng phủ định định hướng Xã hội chủ nghĩa.",
     keywords: [
       "Nhiều thành phần kinh tế",
       "Đa hình thức phân phối",
@@ -37,14 +37,14 @@ const argumentsData = [
   },
   {
     id: "arg-3",
-    title: "Nhầm lẫn giữa hiện tượng bề mặt và bản chất",
+    title: "Nhầm lẫn giữa hiện tượng bề mặt và bản chất con đường Xã hội chủ nghĩa",
     icon: EyeOff,
     color: "text-brand-purple",
     bgColor: "bg-brand-purple",
     image:
       "https://res.cloudinary.com/dratbz8bh/image/upload/v1765768350/BAS1151_20-_20Kinh_20t_E1_BA_BF_20ch_C3_ADnh_20tr_E1_BB_8B_20M_C3_A1c-L_C3_AAnin_xsdptv.jpg", // Ảnh về dòng thời gian
     content:
-      "Phát biểu đang lấy hai hiện tượng là còn kinh tế tư nhân và còn phân hóa thu nhập để đi đến một kết luận rất lớn: Việt Nam chưa thực sự đi theo con đường XHCN. Đây là một bước nhảy logic không vững. Bản chất con đường phải được đánh giá bằng mục tiêu phát triển, quỹ đạo vận động trong toàn bộ tiến trình lịch sử.",
+      "Phát biểu đang lấy hai hiện tượng là còn kinh tế tư nhân và còn phân hóa thu nhập để đi đến một kết luận rất lớn: Việt Nam chưa thực sự đi theo con đường Xã hội chủ nghĩa. Đây là một bước nhảy logic không vững. Bản chất con đường phải được đánh giá bằng mục tiêu phát triển, quỹ đạo vận động trong toàn bộ tiến trình lịch sử.",
     keywords: ["Bước nhảy logic", "Hiện tượng bề mặt", "Quỹ đạo vận động"],
   },
 ];

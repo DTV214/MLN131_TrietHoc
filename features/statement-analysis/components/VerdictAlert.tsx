@@ -142,16 +142,7 @@ export default function VerdictAlert() {
           <h3 className="text-4xl md:text-5xl font-extrabold text-foreground tracking-tight uppercase mb-6 drop-shadow-md">
             Phát biểu hoàn toàn <span className="text-brand-crimson">SAI</span>
           </h3>
-          <p className="text-foreground/80 text-xl leading-relaxed">
-            Nhận định này đã mắc lỗi{" "}
-            <strong className="text-brand-purple">tư duy siêu hình</strong>. Nó
-            đòi hỏi Chủ nghĩa xã hội phải hoàn hảo ngay lập tức, từ đó{" "}
-            <strong className="text-foreground border-b-2 border-brand-crimson/50">
-              phủ nhận tính tất yếu của thời kỳ quá độ
-            </strong>{" "}
-            và nhầm lẫn giữa hiện tượng bề mặt với bản chất cốt lõi của con
-            đường xây dựng đất nước.
-          </p>
+          
         </div>
       </div>
 

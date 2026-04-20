@@ -24,9 +24,10 @@ const criteriaData = [
     description:
       "Đích đến của sự phát triển không chỉ là tăng trưởng kinh tế, mà là nâng cao đời sống vật chất, tinh thần và vị thế làm chủ của con người.",
     points: [
-      "Giải phóng con người toàn diện",
+      "Giải phóng con người",
+      "Phát triển con người toàn diện",
       "Đảm bảo công bằng xã hội",
-      "Lợi ích nhân dân là trung tâm",
+      "Lợi ích nhân dân",
     ],
   },
   {
@@ -40,9 +41,10 @@ const criteriaData = [
     description:
       "Sự tồn tại của kinh tế tư nhân không phải là tiêu chí phủ định. Quan trọng là toàn bộ nền kinh tế đang được định hướng phục vụ mục tiêu chung.",
     points: [
-      "Phát triển lực lượng sản xuất",
+      "Phát triển lực lượng sản xuất hiện đại",
+      "Xây dựng nền kinh tế phát triển cao",
       "Hướng tới chế độ công hữu",
-      "Điều tiết vì lợi ích chung",
+      "Tổ chức và điều tiết vì lợi ích chung toàn xã hội",
     ],
   },
   {
@@ -57,8 +59,9 @@ const criteriaData = [
       "Tiêu chí không nằm ở việc 'đã xóa sạch yếu tố cũ hay chưa', mà nằm ở việc xã hội đó đang vận động theo hướng nào, phục vụ lợi ích của ai.",
     points: [
       "Nhân dân lao động làm chủ",
-      "Khắc phục tàn dư xã hội cũ",
+      "Hướng tới tiến bộ và công bằng xã hội",
       "Xây dựng quan hệ xã hội mới",
+      "Khắc phục tàn dư xã hội cũ",
     ],
   },
 ];
@@ -227,14 +230,13 @@ export default function CriteriaList() {
           </div>
           <p className="text-xl md:text-2xl font-medium text-foreground leading-relaxed flex-1">
             Vấn đề không phải là{" "}
-            <span className="font-bold text-brand-crimson underline decoration-wavy underline-offset-4">
-              còn hay không còn ngay lập tức
+            <span className="font-bold text-brand-crimson">
+              "Còn hay không còn ngay lập tức kinh tế tự nhân và phân hóa thu nhập"
             </span>{" "}
-            kinh tế tư nhân, mà là xã hội đó đang{" "}
+            mà là {" "}
             <span className="font-bold text-brand-purple">
-              chuyển hóa theo hướng nào
+              "Xã hội đó đang chuyển hóa theo hướng nào, dưới sự định hướng nào và nhầm mục tiêu gì"
             </span>
-            , dưới sự định hướng nào, và nhằm mục tiêu gì.
           </p>
           <button className="shrink-0 flex items-center justify-center w-14 h-14 rounded-full bg-foreground text-background hover:scale-110 transition-transform">
             <ArrowRight size={24} />
