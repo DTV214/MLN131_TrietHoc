@@ -38,7 +38,7 @@ const zigZagData = [
     color: "text-brand-purple",
     bgColor: "bg-brand-purple/10",
     image:
-      "https://res.cloudinary.com/dratbz8bh/image/upload/v1765768350/BAS1151_20-_20Kinh_20t_E1_BA_BF_20ch_C3_ADnh_20tr_E1_BB_8B_20M_C3_A1c-L_C3_AAnin_xsdptv.jpg", // Ảnh abstract về sự kết nối con người
+      "https://res.cloudinary.com/dratbz8bh/image/upload/v1765771681/le_nin_1716281116170_izc8la.jpg", // Ảnh abstract về sự kết nối con người
     imageAlt: "Mục tiêu phát triển con người toàn diện",
     theoryContent: (
       <>

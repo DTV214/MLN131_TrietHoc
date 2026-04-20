@@ -20,7 +20,7 @@ const criteriaData = [
     color: "text-brand-purple",
     bgColor: "bg-brand-purple",
     image:
-      "https://res.cloudinary.com/dratbz8bh/image/upload/v1765768350/BAS1151_20-_20Kinh_20t_E1_BA_BF_20ch_C3_ADnh_20tr_E1_BB_8B_20M_C3_A1c-L_C3_AAnin_xsdptv.jpg", // Ảnh nụ cười/con người hạnh phúc
+      "https://res.cloudinary.com/dratbz8bh/image/upload/v1765759775/du-an-bat-dong-san_zpk0lb.jpg", // Ảnh nụ cười/con người hạnh phúc
     description:
       "Đích đến của sự phát triển không chỉ là tăng trưởng kinh tế, mà là nâng cao đời sống vật chất, tinh thần và vị thế làm chủ của con người.",
     points: [
@@ -37,7 +37,7 @@ const criteriaData = [
     color: "text-brand-crimson",
     bgColor: "bg-brand-crimson",
     image:
-      "https://res.cloudinary.com/dratbz8bh/image/upload/v1765768350/BAS1151_20-_20Kinh_20t_E1_BA_BF_20ch_C3_ADnh_20tr_E1_BB_8B_20M_C3_A1c-L_C3_AAnin_xsdptv.jpg", // Ảnh nụ cười/con người hạnh phúc
+      "https://res.cloudinary.com/dratbz8bh/image/upload/v1765759774/kinh-te-chinh-tri-1_s8ejtc.jpg", // Ảnh nụ cười/con người hạnh phúc
     description:
       "Sự tồn tại của kinh tế tư nhân không phải là tiêu chí phủ định. Quan trọng là toàn bộ nền kinh tế đang được định hướng phục vụ mục tiêu chung.",
     points: [
@@ -54,7 +54,7 @@ const criteriaData = [
     color: "text-blue-500",
     bgColor: "bg-blue-500",
     image:
-      "https://res.cloudinary.com/dratbz8bh/image/upload/v1765768350/BAS1151_20-_20Kinh_20t_E1_BA_BF_20ch_C3_ADnh_20tr_E1_BB_8B_20M_C3_A1c-L_C3_AAnin_xsdptv.jpg", // Ảnh nụ cười/con người hạnh phúc
+      "https://res.cloudinary.com/dratbz8bh/image/upload/v1776701194/charismatic-speaker-addressing-large-enthusiastic-600nw-2705206541_djvznp.jpg", // Ảnh nụ cười/con người hạnh phúc
     description:
       "Tiêu chí không nằm ở việc 'đã xóa sạch yếu tố cũ hay chưa', mà nằm ở việc xã hội đó đang vận động theo hướng nào, phục vụ lợi ích của ai.",
     points: [
