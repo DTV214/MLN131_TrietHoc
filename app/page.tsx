@@ -7,6 +7,7 @@ import CriteriaList from "@/features/evaluation-criteria/components/CriteriaList
 import AnimatedTimeline from "@/features/historical-timeline/components/AnimatedTimeline";
 import AiIntegrationLog from "@/features/ai-usage/components/AiIntegrationLog";
 import AiVideoShowcase from "@/features/statement-analysis/components/AiVideoShowcase";
+import StrategicTycoonGame from "@/features/strategic-game/components/StrategicTycoonGame";
 
 export default function Home() {
   return (
@@ -98,6 +99,14 @@ export default function Home() {
 
           <AiIntegrationLog />
         </div>
+      </section>
+
+      {/* SECTION 7: Mini-game chiến lược */}
+      <section
+        id="strategic-game"
+        className="w-full py-24 px-4 md:px-12 flex flex-col items-center bg-secondary/30"
+      >
+        <StrategicTycoonGame />
       </section>
     </div>
   );
