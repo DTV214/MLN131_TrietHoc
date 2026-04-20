@@ -1,15 +1,9 @@
 "use client";
 
-import {
-  Bot,
-  Sparkles,
-  PenTool,
-  Music,
-  CheckCircle2,
-} from "lucide-react";
+import { Bot, Sparkles, Video, Mic, CheckCircle2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-// Dữ liệu báo cáo sử dụng AI trong đồ án
+// Dữ liệu báo cáo sử dụng AI thực tế trong đồ án Nhóm 2
 const aiUsageLogs = [
   {
     id: "ai-llm",
@@ -21,39 +15,40 @@ const aiUsageLogs = [
     borderColor: "border-brand-purple/30",
     tasks: [
       "Hỗ trợ phân tích, tổng hợp lý luận triết học Mác - Lênin.",
-      "Tối ưu hóa cấu trúc lập luận 'Đúng/Sai' cho logic và chặt chẽ.",
-      "Tạo bộ khung source code Next.js và các component Tailwind CSS.",
+      "Xây dựng cấu trúc lập luận phản biện cho nhận định Sai/Đúng.",
+      "Phát triển toàn bộ mã nguồn Next.js và giao diện Glassmorphism.",
     ],
-    contribution: 40, // Phần trăm đóng góp ước tính
+    contribution: 40,
   },
   {
-    id: "ai-design",
-    tool: "AI Design Tools (Figma AI / v0)",
-    category: "Thiết kế UI/UX",
-    icon: PenTool,
-    color: "text-blue-500 dark:text-blue-400",
+    id: "ai-video",
+    tool: "Hailuo AI (MiniMax)",
+    category: "Sản xuất Video",
+    icon: Video,
+    color: "text-blue-500",
     bgColor: "bg-blue-500/10",
     borderColor: "border-blue-500/30",
     tasks: [
-      "Lên ý tưởng bố cục Feature-based và prototyping giao diện.",
-      "Tạo dải màu Gradient (Mesh) và hiệu ứng Glassmorphism.",
-      "Gợi ý UX cho các khối nội dung Accordion và Timeline.",
+      "Khởi tạo các thước phim tư liệu điện ảnh (Cinematic) từ mô tả văn bản.",
+      "Mô phỏng bối cảnh kinh tế - xã hội thực tế cho thời kỳ quá độ.",
+      "Tạo hình ảnh minh họa trực quan cho các khái niệm triết học trừu tượng.",
     ],
-    contribution: 25,
+    contribution: 30,
   },
   {
-    id: "ai-music",
-    tool: "Suno AI",
-    category: "Sáng tạo Audio/Media",
-    icon: Music,
+    id: "ai-voice",
+    tool: "ElevenLabs AI",
+    category: "Giọng đọc AI",
+    icon: Mic,
     color: "text-brand-crimson",
     bgColor: "bg-brand-crimson/10",
     borderColor: "border-brand-crimson/30",
     tasks: [
-      "Sáng tác nhạc nền (background music) cho video phóng sự/podcast của nhóm.",
-      "Tạo hiệu ứng âm thanh minh họa cho các mốc lịch sử.",
+      "Chuyển đổi kịch bản thuyết minh thành giọng đọc truyền cảm, chuyên nghiệp.",
+      "Tối ưu hóa âm điệu học thuật phù hợp với tính chất của bài báo cáo.",
+      "Lồng tiếng cho video tổng quan nhằm tăng khả năng tiếp cận nội dung.",
     ],
-    contribution: 15,
+    contribution: 30,
   },
 ];
 
@@ -67,7 +62,7 @@ export default function AiIntegrationLog() {
         </div>
         <div>
           <h3 className="text-xl font-bold text-foreground mb-2">
-            Tuyên bố minh bạch
+            Tuyên bố minh bạch ứng dụng AI
           </h3>
           <p className="text-muted-foreground leading-relaxed">
             Nhóm 2 cam kết toàn bộ tư duy lý luận, cấu trúc bài làm và phán
@@ -76,8 +71,8 @@ export default function AiIntegrationLog() {
             <span className="font-semibold text-foreground">
               Trợ lý kỹ thuật và Sáng tạo
             </span>{" "}
-            nhằm tối ưu hóa thời gian và nâng cao chất lượng trải nghiệm trực
-            quan của sản phẩm.
+            nhằm tối ưu hóa thời gian sản xuất và nâng cao chất lượng trải
+            nghiệm trực quan cho đồ án Triết học.
           </p>
         </div>
       </div>
